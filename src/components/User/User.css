@@ -1,0 +1,25 @@
+.button-pay {
+    background-color: var(--green);
+    transition: all 0.5s ease;
+    margin-left: 1rem;
+    border-radius: 50%;
+
+    width: 2.5rem;
+    height: 2.5rem;
+
+
+
+}
+
+.button-pay svg {
+    margin-left: -.4rem;
+}
+
+
+.button-pay:hover {
+    background-color: #327F27;
+}
+
+.btn-pay {
+    width: 6rem;
+}

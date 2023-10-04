@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;500&display=swap');
+
+
+
+
+
+:root {
+    --blue: #B8EAFA;
+    --yellow: #FEFC7C;
+    --red: #FF0202;
+    --green: #50BC41;
+    --background: rgba(255, 44, 44, 0.8);
+    --font-principal: 'Poppins', sans-serif;
+
+}
+
+html {
+    font-family: var(--font-principal);
+}
+
+.custom-class {
+    background-color: red !important;
+    display: flex !important;
+    justify-content: flex-start !important;
+    align-items: center !important;
+}
+
+.user-hover {
+    transition: all 0.5s ease;
+}
+
+.user-hover:hover {
+    box-shadow: 8px 7px 7px 4px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 8px 7px 7px 4px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 8px 7px 7px 4px rgba(0, 0, 0, 0.75);
+}
+
+.add-user-container {
+    background-color: #EDEFEC;
+    margin-top: 5rem;
+
+    width: 100%;
+    height: 100vh;
+
+}
+
+.form-add-user {
+    width: 50%;
+    text-align: center;
+    border: thin solid black;
+    padding: 1rem;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 11px 9px 7px -6px rgba(0, 0, 0, 0.48);
+    -webkit-box-shadow: 11px 9px 7px -6px rgba(0, 0, 0, 0.48);
+    -moz-box-shadow: 11px 9px 7px -6px rgba(0, 0, 0, 0.48);
+}
+
+.user-list {
+    width: 100%;
+
+    height: 100vh;
+    position: fixed;
+    top: 5rem;
+    left: 0;
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+
+.override {
+    height: 80%;
+    overflow-y: scroll;
+
+}
+
+
+
+/* Estilos para motores Webkit y blink (Chrome, Safari, Opera... )*/
+
+.override::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+
+.override::-webkit-scrollbar:vertical {
+    width: 10px;
+}
+
+.override::-webkit-scrollbar-button:increment,
+.override::-webkit-scrollbar-button {
+    display: none;
+}
+
+.override::-webkit-scrollbar:horizontal {
+    height: 10px;
+}
+
+.override::-webkit-scrollbar-thumb {
+    background-color: #797979;
+    border-radius: 20px;
+    border: 2px solid #f1f2f3;
+}
+
+.override::-webkit-scrollbar-track {
+    border-radius: 10px;
+}

@@ -1,0 +1,52 @@
+.search-btn {
+    color: red !important;
+    border: 1px solid red;
+
+}
+
+a {
+    color: white;
+}
+
+.user-icon-link {
+    background-color: white;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    transition: all 0.5s ease;
+    margin-left: 2rem;
+}
+
+.user-icon-link:hover {
+    scale: 1.1;
+}
+
+.btn-search {
+    transition: all 0.5s ease;
+    color: white;
+    border: 1px solid white;
+    font-family: var(--font-principal);
+
+}
+
+.btn-search:hover {
+    color: red;
+    border: thin solid var(--background);
+    background-color: white;
+}
+
+.links-nav {
+    transition: all 0.5s ease;
+    color: white;
+    font-family: var(--font-principal);
+}
+
+.links-nav:hover {
+    color: white;
+    scale: 1.2;
+}
+
+.active-links {
+    scale: 1.2;
+    color: white;
+}
