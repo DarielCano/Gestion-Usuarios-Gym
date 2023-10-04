@@ -13,7 +13,7 @@ const Header = () => {
         onLoadedMetadata={"this.muted= true"}
         autoPlay
         loop
-        className="video"
+        className="videop"
       >
         <source
           src="./video/istockphoto-1227517584-640_adpp_is.mp4"
