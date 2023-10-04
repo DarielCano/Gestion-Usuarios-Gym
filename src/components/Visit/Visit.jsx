@@ -1,5 +1,5 @@
 import FormVisit from "../FormVisit/FormVisit";
-import UserVisit from "../UserVisit/userVisit";
+import UserVisit from "../UserVisit/UserVisit";
 import { useEffect, useState } from "react";
 import Swal from "sweetalert2";
 
