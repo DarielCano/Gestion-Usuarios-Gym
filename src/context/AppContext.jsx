@@ -6,7 +6,7 @@ import "../index.css";
 export const AppContext = createContext([]);
 
 export function AppContextProvider({ children }) {
-  const [user, setUser] = useState({});
+  /*   const [user, setUser] = useState({}); */
   const day = new Date();
   const month = months(day.getMonth());
   const [payMonth, setPayMonth] = useState(false);
@@ -75,7 +75,7 @@ export function AppContextProvider({ children }) {
   return (
     <AppContext.Provider
       value={{
-        user,
+        /*      user, */
         payProceed,
         showInfo,
         payMonth,
