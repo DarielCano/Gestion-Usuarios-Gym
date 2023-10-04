@@ -5,7 +5,7 @@ Permite realizar operaciones CRUD, asi como exportar archivos en formato Excel
 
 # INSTALACION
 
-- Paso previo. Clonar este repo que contiene el backend - [@api-gym](https://www.github.com/DarieCano/api-gym)
+- Paso previo. Clonar este repo que contiene el backend [api-gym](https://www.github.com/DarielCano/api-gym)
 - Clonar repositorio de GitHub.
 - Instalar las dependencias (npm install).
 - Ejecutar la aplicación con npm run dev
