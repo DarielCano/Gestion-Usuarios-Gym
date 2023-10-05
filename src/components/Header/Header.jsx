@@ -6,7 +6,7 @@ const Header = () => {
   return (
     <div
       className="w-100  header-container relative"
-      style={{ marginTop: "4.3rem" }}
+      style={{ marginTop: "5.15rem" }}
     >
       <div className="overlay"></div>
       <video

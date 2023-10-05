@@ -7,8 +7,8 @@ export const AppContext = createContext([]);
 
 export function AppContextProvider({ children }) {
   /*   const [user, setUser] = useState({}); */
-  const day = new Date();
-  const month = months(day.getMonth());
+  /* const day = new Date();
+   const lastMonthPay = months(day.getMonth()); */
   const [payMonth, setPayMonth] = useState(false);
 
   const payProceed = (id) => {
@@ -46,25 +46,32 @@ export function AppContextProvider({ children }) {
       .then((data) => {
         Swal.fire({
           html: `<h3 style=>Información del Usuario</h3>
-        <div className="custom-class"><strong> <u>Nombre:</u></strong> <small>${
-          data.data.name
-        }</small></div>
-        <div><strong><u>Apellidos:</u></strong> <small>${
-          data.data.surname
-        }</small></div>
-        <div><strong><u>email:</u></strong> <small>${
-          data.data.email
-        }</small></div>
-        <div><strong><u>Teléfono:</u></strong> <small>${
-          data.data.phone
-        }</small></div>
-        <div><strong><u>Mes pagado:</u></strong> <small>${month}</small></div>
-        <div><strong><u>Próximo pago:</u></strong> <small>${new Date(
-          data.data.nextPay
-        ).getDate()} - ${months(
+          <div >
+          <div className="custom-class"><strong> <u>Nombre:</u></strong> <small>${
+            data.data.name
+          }</small></div>
+          <div><strong><u>Apellidos:</u></strong> <small>${
+            data.data.surname
+          }</small></div>
+          <div><strong><u>email:</u></strong> <small>${
+            data.data.email
+          }</small></div>
+          <div><strong><u>Teléfono:</u></strong> <small>${
+            data.data.phone
+          }</small></div>
+          <div><strong><u>Mes pagado:</u></strong> <small>${months(
+            new Date(data.data.nextPay).getMonth() - 1
+          )}</small></div>
+          <div><strong><u>Próximo pago:</u></strong> <small>${new Date(
+            data.data.nextPay
+          ).getDate()} - ${months(
             new Date(data.data.nextPay).getMonth()
           )} - ${new Date(data.data.nextPay).getFullYear()}
-                  </small></div> `,
+                    </small></div> 
+          
+          
+          </div>
+        `,
 
           confirmButtonText: "Continuar",
         });

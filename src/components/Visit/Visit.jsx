@@ -56,7 +56,7 @@ const Visit = () => {
   return (
     <div
       className="w-100  vh-100 d-flex "
-      style={{ marginTop: "6rem", paddingLeft: "0.8rem" }}
+      style={{ marginTop: "6.7rem", paddingLeft: "0.8rem" }}
     >
       <div
         className="visitForm w-50 "

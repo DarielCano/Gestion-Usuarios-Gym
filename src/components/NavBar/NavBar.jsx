@@ -2,6 +2,7 @@ import { Link, NavLink, useNavigate } from "react-router-dom";
 import { GrUserAdd } from "react-icons/gr";
 import { useState } from "react";
 import "./NavBar.css";
+import logo from "../../assets/logo_apocalipsys.png";
 
 const NavBar = () => {
   const [search, setSearch] = useState("");
@@ -16,7 +17,7 @@ const NavBar = () => {
 
   return (
     <nav
-      className="navbar navbar-expand-lg bg-body-tertiary w-100 mb-5 "
+      className="navbar navbar-expand-lg bg-body-tertiary w-100  "
       style={{
         position: "fixed",
         zIndex: "999",
@@ -38,10 +39,10 @@ const NavBar = () => {
       >
         <Link
           to="/"
-          className="navbar-brand alert-danger"
-          style={{ color: "white", fontFamily: "var(--font-principal)" }}
+          /*      className="navbar-brand alert-danger"
+          style={{ color: "white", fontFamily: "var(--font-principal)" }} */
         >
-          GYM
+          <img className="logo" src={logo} alt="logo" />
         </Link>
         <button
           className="navbar-toggler"

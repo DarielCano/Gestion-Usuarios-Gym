@@ -79,7 +79,7 @@ const Users = () => {
                 name="select"
                 onChange={(e) => handleSelect(e)}
               >
-                <option value="no"> </option>
+                <option value="no"> Todos</option>
                 <option value="pay"> Mes Pagado </option>
                 <option value="noPay"> Mes no pagado </option>
               </select>
