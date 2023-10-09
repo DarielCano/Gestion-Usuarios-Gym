@@ -1,0 +1,1 @@
+start cmd.exe /k "cd C:\Users\52461\Desktop\mis_proyectos_www\ApocalypsisGym\ApocalypsisGym && npm run preview "

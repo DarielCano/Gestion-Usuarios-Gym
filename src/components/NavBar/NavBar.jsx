@@ -2,7 +2,7 @@ import { Link, NavLink, useNavigate } from "react-router-dom";
 import { GrUserAdd } from "react-icons/gr";
 import { useState } from "react";
 import "./NavBar.css";
-import logo from "../../assets/logo_apocalipsys.png";
+/* import logo from "../../assets/logo_apocalipsys.png"; */
 
 const NavBar = () => {
   const [search, setSearch] = useState("");
@@ -39,10 +39,14 @@ const NavBar = () => {
       >
         <Link
           to="/"
-          /*      className="navbar-brand alert-danger"
-          style={{ color: "white", fontFamily: "var(--font-principal)" }} */
+          style={{
+            marginRight: "3rem",
+            fontSize: "2rem",
+            textDecoration: "none",
+          }}
         >
-          <img className="logo" src={logo} alt="logo" />
+          LOGO
+          {/*  <img className="logo" src={logo} alt="logo" /> */}
         </Link>
         <button
           className="navbar-toggler"
