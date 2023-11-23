@@ -1,0 +1,27 @@
+.form-visit-container {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+
+
+
+}
+
+.form-text {
+    font-family: var(--font-principal);
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+}
+
+.form-visit {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

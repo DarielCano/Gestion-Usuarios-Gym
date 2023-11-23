@@ -1,0 +1,8 @@
+.loader {
+    width: 100vW;
+    height: 100vh;
+    /* background-color: rgba(0, 0, 0, 0.7); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

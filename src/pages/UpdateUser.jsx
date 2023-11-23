@@ -1,3 +1,4 @@
+import Aside from "../components/Aside/Aside";
 import Form from "../components/Form/Form";
 import { useLocation } from "react-router-dom";
 
@@ -16,9 +17,10 @@ const UpdateUser = () => {
   };
   return (
     <div
-      className=" w-75  m-auto vh-100 d-flex flex-column justify-content-start align-items-center"
+      className=" w-100  m-auto vh-100 d-flex flex-column justify-content-start align-items-center"
       style={{ paddingTop: "6rem" }}
     >
+      <Aside />
       {<Form initialValues={initialValues} isUpdate={true} />}
     </div>
   );

@@ -7,15 +7,24 @@
 :root {
     --blue: #B8EAFA;
     --yellow: #FEFC7C;
-    --red: #FF0202;
+    --red: #d70000;
     --green: #50BC41;
     --background: rgba(255, 44, 44, 0.8);
     --font-principal: 'Poppins', sans-serif;
 
+
+
+    --red-strong: #920a0a;
+    --red-hover: #ff9494;
+    --red-middle: #ff5757;
 }
 
 html {
     font-family: var(--font-principal);
+}
+
+a {
+    text-decoration: none;
 }
 
 .custom-class {
@@ -44,8 +53,15 @@ html {
 
 }
 
+.users-container {
+    width: 100%;
+    height: 100vh;
+
+
+}
+
 .form-add-user {
-    width: 50%;
+    width: 40%;
     text-align: center;
     border: thin solid black;
     padding: 1rem;
@@ -56,27 +72,46 @@ html {
     -moz-box-shadow: 11px 9px 7px -6px rgba(0, 0, 0, 0.48);
 }
 
-.user-list {
-    width: 100%;
-
-    height: 100vh;
-    position: fixed;
-    top: 5rem;
-    left: 0;
-    padding-left: 3rem;
-    padding-right: 3rem;
+.form-add-user h3 {
+    font-family: var(--font-principal);
+    margin-top: 2rem;
+    margin-bottom: 2rem;
 }
 
-.override {
+
+
+
+.user-list {
+
+    width: 100%;
+    /* 
+    height: 80vh; */
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+
+}
+
+.users-content {
+    width: 85%;
+    margin-top: 5rem;
+    padding-left: 2rem;
+    padding-right: 3rem;
+
+
+}
+
+/* .override {
     height: 80%;
     overflow-y: scroll;
 
 }
 
-
+ */
 
 /* Estilos para motores Webkit y blink (Chrome, Safari, Opera... )*/
-
+/* 
 .override::-webkit-scrollbar {
     -webkit-appearance: none;
 }
@@ -102,7 +137,7 @@ html {
 
 .override::-webkit-scrollbar-track {
     border-radius: 10px;
-}
+} */
 
 .styles {
     display: flex;
@@ -119,4 +154,47 @@ html {
     background-color: white;
     padding: 0.5rem;
     border-radius: 28px;
+}
+
+.info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.font {
+    font-family: var(--font-principal);
+}
+
+.title-middle {
+    font-size: 1.2rem;
+}
+
+.user-details {
+    width: 100%;
+    height: 100%;
+    border-radius: 16px;
+    padding: 2rem;
+}
+
+.user-details h4 {
+    margin-bottom: 1rem;
+    border-bottom: 2px solid black;
+    font-weight: bold;
+}
+
+.user-details strong {
+    margin-right: 0.4rem;
+
+}
+
+.user-details__text {
+    margin-bottom: 1rem;
+}
+
+.zero-matches {
+    width: 100%;
+    height: 100%;
+    padding-top: 5rem;
+    padding-left: 20rem;
 }

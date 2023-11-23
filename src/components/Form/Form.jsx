@@ -88,7 +88,7 @@ const Form = ({ initialValues, isUpdate = false }) => {
                 confirmButtonText: "Continuar",
               }).then((result) => {
                 if (result.isConfirmed) {
-                  navigate("/users");
+                  navigate("/private/users");
                 }
               });
             } else {
@@ -125,8 +125,8 @@ const Form = ({ initialValues, isUpdate = false }) => {
         <input
           className={
             formik.errors.name && formik.touched.name
-              ? "p-2 mb-3 rounded-3 border-4  border-danger"
-              : "p-2 mb-3 rounded-3 border-1"
+              ? "w-75 p-2 mb-3  border-4  border-danger"
+              : "w-75 p-2 mb-3  border-1"
           }
           type="text"
           name="name"
@@ -138,8 +138,8 @@ const Form = ({ initialValues, isUpdate = false }) => {
         <input
           className={
             formik.errors.surname && formik.touched.surname
-              ? "p-2 mb-3 rounded-3 border-4  border-danger"
-              : "p-2 mb-3 rounded-3 border-1"
+              ? "w-75 p-2 mb-3  border-4  border-danger"
+              : "w-75 p-2 mb-3  border-1"
           }
           type="text"
           name="surname"
@@ -151,8 +151,8 @@ const Form = ({ initialValues, isUpdate = false }) => {
         <input
           className={
             formik.errors.phone && formik.touched.phone
-              ? "p-2 mb-3 rounded-3 border-4  border-danger"
-              : "p-2 mb-3 rounded-3 border-1"
+              ? "w-75 p-2 mb-3  border-4  border-danger"
+              : "w-75 p-2 mb-3  border-1"
           }
           type="text"
           name="phone"
@@ -164,8 +164,8 @@ const Form = ({ initialValues, isUpdate = false }) => {
         <input
           className={
             formik.errors.email && formik.touched.email
-              ? "p-2 mb-3 rounded-3 border-4  border-danger"
-              : "p-2 mb-3 rounded-3 border-1"
+              ? "w-75 p-2 mb-3  border-4  border-danger"
+              : "w-75 p-2 mb-3  border-1"
           }
           type="email"
           name="email"
@@ -177,8 +177,8 @@ const Form = ({ initialValues, isUpdate = false }) => {
         <input
           className={
             formik.errors.address && formik.touched.address
-              ? "p-2 mb-3 rounded-3 border-4  border-danger"
-              : "p-2 mb-3 rounded-3 border-1"
+              ? "w-75 p-2 mb-3  border-4  border-danger"
+              : "w-75 p-2 mb-3  border-1"
           }
           type="text"
           name="address"
@@ -188,13 +188,13 @@ const Form = ({ initialValues, isUpdate = false }) => {
         />
 
         <input
-          className="p-4 mb-3 rounded-3 border-1"
+          className="w-75 p-4 mb-3  border-1"
           type="date"
           name="incomeDate"
           value={formik.values.incomeDate}
           onChange={formik.handleChange}
         />
-        <button className="btn btn-danger p-2" type="submit">
+        <button className="w-50 btn btn-danger p-2" type="submit">
           {isUpdate ? "Modificar Usuario" : "Agregar Usuario"}
         </button>
       </form>

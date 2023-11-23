@@ -1,0 +1,17 @@
+.account-role {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rol-btn {
+    background-color: var(--red-middle);
+    transition: all 0.5s ease;
+    color: white;
+    font-weight: bold;
+    margin-left: 0.5rem;
+}
+
+.rol-btn:hover {
+    background-color: var(--red-hover);
+}

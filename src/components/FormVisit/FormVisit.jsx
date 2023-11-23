@@ -4,7 +4,13 @@ import Swal from "sweetalert2";
 
 import PropTypes from "prop-types";
 
+import "./FormVisit.css";
+import { useContext } from "react";
+import { AppContext } from "../../context/AppContext";
+
 const FormVisit = ({ newVisit, setNewVisit }) => {
+  const { closeModal } = useContext(AppContext);
+
   const validationSchema = Yup.object().shape({
     name: Yup.string()
       .min(3, "Nombre debe tener al menos tres caracteres")
@@ -22,6 +28,7 @@ const FormVisit = ({ newVisit, setNewVisit }) => {
     validationSchema,
 
     onSubmit: () => {
+      closeModal();
       const newUserVisit = formik.values;
 
       fetch(`http://localhost:4468/api/new-visit`, {
@@ -60,17 +67,14 @@ const FormVisit = ({ newVisit, setNewVisit }) => {
   });
 
   return (
-    <div style={{ marginTop: "4rem" }}>
-      <h3 className="text-center text-white p-2 ">Datos del usuario</h3>
-      <form
-        className="w-100  d-flex flex-column justify-content-between p-3 "
-        onSubmit={formik.handleSubmit}
-      >
+    <div className="form-visit-container">
+      <h3 className="text-center  form-text">Datos del usuario</h3>
+      <form className="form-visit" onSubmit={formik.handleSubmit}>
         <input
           className={
             formik.errors.name && formik.touched.name
-              ? "p-2 mb-3 rounded-3 border-4  border-danger"
-              : "p-2 mb-3 rounded-3 border-1"
+              ? "w-100 p-2 mb-3 border-4  border-danger"
+              : "w-100 p-2 mb-3  border-1"
           }
           type="text"
           name="name"
@@ -82,18 +86,18 @@ const FormVisit = ({ newVisit, setNewVisit }) => {
         <input
           className={
             formik.errors.surname && formik.touched.surname
-              ? "p-2 mb-3 rounded-3 border-4  border-danger"
-              : "p-2 mb-3 rounded-3 border-1"
+              ? "w-100  p-2 mb-3 border-4  border-danger"
+              : "w-100  p-2 mb-3  border-1"
           }
           type="text"
           name="surname"
-          placeholder={"Apellido"}
+          placeholder={"Apellido(s)"}
           value={formik.values.surname}
           onChange={formik.handleChange}
         />
 
         <button
-          className="btn btn-danger border-1 border-white p-2 mt-4"
+          className=" w-100 btn btn-danger border-1 border-white p-2 mt-4"
           type="submit"
         >
           Agregar Visitante

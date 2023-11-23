@@ -1,15 +1,13 @@
 import { createContext, useState } from "react";
 import PropTypes from "prop-types";
 import Swal from "sweetalert2";
-import { months } from "../helpers/months";
+
 import "../index.css";
 export const AppContext = createContext([]);
 
 export function AppContextProvider({ children }) {
-  /*   const [user, setUser] = useState({}); */
-  /* const day = new Date();
-   const lastMonthPay = months(day.getMonth()); */
   const [payMonth, setPayMonth] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
   const payProceed = (id) => {
     fetch(`http://localhost:4468/api/user/${id}`)
@@ -40,43 +38,12 @@ export function AppContextProvider({ children }) {
       .catch((err) => err);
   };
 
-  const showInfo = (id) => {
-    fetch(`http://localhost:4468/api/user/${id}`)
-      .then((resp) => resp.json())
-      .then((data) => {
-        Swal.fire({
-          html: `<h3 style=>Información del Usuario</h3>
-          <div >
-          <div className="custom-class"><strong> <u>Nombre:</u></strong> <small>${
-            data.data.name
-          }</small></div>
-          <div><strong><u>Apellidos:</u></strong> <small>${
-            data.data.surname
-          }</small></div>
-          <div><strong><u>email:</u></strong> <small>${
-            data.data.email
-          }</small></div>
-          <div><strong><u>Teléfono:</u></strong> <small>${
-            data.data.phone
-          }</small></div>
-          <div><strong><u>Mes pagado:</u></strong> <small>${months(
-            new Date(data.data.nextPay).getMonth() - 1
-          )}</small></div>
-          <div><strong><u>Próximo pago:</u></strong> <small>${new Date(
-            data.data.nextPay
-          ).getDate()} - ${months(
-            new Date(data.data.nextPay).getMonth()
-          )} - ${new Date(data.data.nextPay).getFullYear()}
-                    </small></div> 
-          
-          
-          </div>
-        `,
-
-          confirmButtonText: "Continuar",
-        });
-      })
-      .catch((err) => err);
+  /* eventos del modal */
+  const openModal = () => {
+    setIsOpen(true);
+  };
+  const closeModal = () => {
+    setIsOpen(false);
   };
 
   return (
@@ -84,8 +51,12 @@ export function AppContextProvider({ children }) {
       value={{
         /*      user, */
         payProceed,
-        showInfo,
+
         payMonth,
+        closeModal,
+        setIsOpen,
+        isOpen,
+        openModal,
       }}
     >
       {children}

@@ -1,8 +1,9 @@
 .search-btn {
-    color: red !important;
-    border: 1px solid red;
+    color: var(--red);
+    border: 1px solid var(--red);
 
 }
+
 
 a {
     color: white;
@@ -30,9 +31,9 @@ a {
 }
 
 .btn-search:hover {
-    color: red;
+
     border: thin solid var(--background);
-    background-color: white;
+    background-color: var(--red-hover);
 }
 
 .links-nav {
@@ -49,4 +50,34 @@ a {
 .active-links {
 
     color: white;
+}
+
+.nav {
+    background-color: var(--red-middle);
+    padding: 1rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 20rem;
+    position: fixed;
+    top: 0;
+    right: 0;
+
+    margin-top: 0.5rem;
+    margin-right: 0.5rem;
+    border-radius: 8px;
+
+}
+
+form {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.nav input {
+    border-radius: 8px;
+    padding: 0.3rem;
 }
