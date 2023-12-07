@@ -28,7 +28,10 @@ const Users = () => {
         if (status === "pay") {
           setUsers(() => {
             return data.data.filter((data) => {
-              return today.getMonth() < new Date(data.nextPay).getMonth();
+              return (
+                today.getFullYear() < new Date(data.nextPay).getFullYear() ||
+                today.getMonth() < new Date(data.nextPay).getMonth()
+              );
             });
           });
           return;
@@ -98,7 +101,9 @@ const Users = () => {
                 <u>Mes pagado:</u>
               </strong>
               <small>
-                {months(new Date(showUserDetail?.nextPay).getMonth() - 1)}
+                {new Date(showUserDetail?.nextPay).getMonth() == 0
+                  ? months(11)
+                  : months(new Date(showUserDetail?.nextPay).getMonth() - 1)}
               </small>
             </div>
             <div className="user-details__text">

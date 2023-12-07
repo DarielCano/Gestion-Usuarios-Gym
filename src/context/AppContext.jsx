@@ -22,7 +22,7 @@ export function AppContextProvider({ children }) {
           cancelButtonText: "Cerrar",
         }).then((result) => {
           if (result.isConfirmed) {
-            fetch(`http://localhost:4468/api//update-date/${id}`, {
+            fetch(`http://localhost:4468/api/update-date/${id}`, {
               method: "PUT",
             }).then(() =>
               Swal.fire({

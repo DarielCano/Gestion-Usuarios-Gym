@@ -67,13 +67,20 @@ const Reports = () => {
       .then((data) => setUserTotal(data.data.length));
   }, [act]);
 
-  console.log(userTotal);
+  console.log(repInfo);
 
   let totalVisit = 0;
   let totalMonth = 0;
 
   const infoVisit = repInfo?.dataVisit?.map((month) => month[1]);
   const infoMonth = repInfo?.dataMonth?.map((month) => month[1]);
+
+  const infoMonthMount = repInfo?.dataMonth?.map(
+    (month) => Number(month[1]) * repInfo.priceMonth
+  );
+  const infoVisitMount = repInfo?.dataVisit?.map(
+    (month) => Number(month[1]) * repInfo.priceVisit
+  );
 
   totalVisit = infoVisit ? infoVisit.reduce((a, b) => a + b, 0) : 0;
   totalMonth = infoVisit ? infoMonth.reduce((a, b) => a + b, 0) : 0;
@@ -155,13 +162,13 @@ const Reports = () => {
     datasets: [
       {
         label: "Mensualidad",
-        data: infoMonth,
+        data: infoMonthMount,
         backgroundColor: "#920a0a",
       },
 
       {
         label: "Visitas",
-        data: infoVisit,
+        data: infoVisitMount,
         backgroundColor: "#ff9494",
       },
     ],

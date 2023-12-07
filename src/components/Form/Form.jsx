@@ -53,7 +53,7 @@ const Form = ({ initialValues, isUpdate = false }) => {
                 confirmButtonText: "Continuar",
               }).then((result) => {
                 if (result.isConfirmed) {
-                  navigate("/users");
+                  navigate("/private/users");
                 }
               });
             } else {

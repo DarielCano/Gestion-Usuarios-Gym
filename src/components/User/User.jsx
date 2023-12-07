@@ -20,7 +20,9 @@ const User = ({ user, setIsDelete, isDelete, showInfo }) => {
   const isPay =
     today.getMonth() ===
     pay.getMonth(); /* && today.getDate() > pay.getDate() */
-  const afterPay = today.getMonth() < pay.getMonth();
+  const afterPay =
+    today.getFullYear() < pay.getFullYear() ||
+    today.getMonth() < pay.getMonth();
 
   const deleteUser = (id) => {
     Swal.fire({
