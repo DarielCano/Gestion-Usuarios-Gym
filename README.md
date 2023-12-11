@@ -4,7 +4,7 @@ Gestión de Usuarios Gym es una aplicación creada con React Js. Consume una API
 Permite realizar operaciones CRUD, asi como exportar archivos en formato Excel
 
 # INSTALACION
-
+- Tener instalado MongoDB con MongoDB Compass(para uso más sencillo)
 - Paso previo. Clonar este repo que contiene el backend [api-gym](https://www.github.com/DarielCano/api-gym)
 - Clonar repositorio de GitHub.
 - Instalar las dependencias (npm install).
